@@ -13,13 +13,11 @@ return new class extends Migration
     {
         Schema::create('especialidades', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+        $table->string('nombre')->unique(); // Ej: Pediatría, Cardiología
+        $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('especialidades');

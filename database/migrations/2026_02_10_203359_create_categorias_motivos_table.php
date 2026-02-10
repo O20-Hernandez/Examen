@@ -23,5 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('categorias_motivos');
+        $table = 'categoria_motivos';
+
     }
 };

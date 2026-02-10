@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Especialidades extends Model
 {
-    /** @use HasFactory<\Database\Factories\EspecialidadesFactory> */
+   
     use HasFactory;
 }

@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('profecionales', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        $table->id();
+        $table->string('nombre_profesional');
+        $table->foreignId('especialidad_id')
+                ->constrained('especialidades')
+                ->onDelete('cascade');
+        $table->timestamps();
         });
     }
 
